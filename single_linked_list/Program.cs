@@ -57,9 +57,23 @@ namespace single_linked_list
                     Console.WriteLine();
                     return ;
                 }
+                previous.next = current;
+                previous.next = newnode;
             }
             newnode.next = current;
             previous.next = newnode;
+        }
+
+        public bool delNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current)== false)
+                return false;
+            previous.next = current.next;
+            if(current = START)
+                START = START.next;
+            return true;
         }
     }
     internal class Program
