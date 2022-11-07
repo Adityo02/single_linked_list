@@ -86,11 +86,25 @@ namespace single_linked_list
                 current = current.next;
             }
             if (current == null)
-                return;
+                return false;
             else
                 return true;
         }
-
+        public void Traverse()
+        {
+            if(ListEmpty())
+                Console.WriteLine("\nThe Records in The List are: ");
+            else
+            {
+                Console.WriteLine("\nThe Records in The List are: ");
+                Node currentNode;
+                for (currentNode = START; currentNode != null;
+                    currentNode = currentNode.next)
+                    Console.Write(currentNode.rollNumber + " "
+                        + currentNode.name + "\n");
+                Console.WriteLine();
+            }
+        }
     }
     internal class Program
     {
