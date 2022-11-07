@@ -26,7 +26,7 @@ namespace single_linked_list
             int rollNo;
             string nm;
             Console.Write("\nEnter the roll Number of the student : ");
-            rollNo = Convert.ToInt32(Console.ReadLine);
+            rollNo = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the roll Name of the student : ");
             nm = Console.ReadLine();
             Node newnode = new Node();
@@ -50,6 +50,16 @@ namespace single_linked_list
             previous = START;
             current = START;
 
+            while ((current != null) && (rollNo >= current.rollNumber))
+            {
+                if(rollNo == current.rollNumber)
+                {
+                    Console.WriteLine();
+                    return ;
+                }
+            }
+            newnode.next = current;
+            previous.next = newnode;
         }
     }
     internal class Program
