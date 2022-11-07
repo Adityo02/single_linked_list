@@ -8,7 +8,9 @@ namespace single_linked_list
 {
     class Node
     {
-        
+        public int rollNumber;
+        public string name;
+        public Node next;
     }
 
     class List
