@@ -170,7 +170,8 @@ namespace single_linked_list
                                     Console.WriteLine("\nList is Empty");
                                     break ;
                                 }
-                                Node previous, current = null;
+                                Node previous, current;
+                                previous = current = null;
                                 Console.Write("\nEnter the roll number of the " +
                                     "Student whole record is to be Searched: ");
                                 int num = Convert.ToInt32(Console.ReadLine());
