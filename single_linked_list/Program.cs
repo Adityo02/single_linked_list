@@ -71,7 +71,7 @@ namespace single_linked_list
             if (Search(rollNo, ref previous, ref current)== false)
                 return false;
             previous.next = current.next;
-            if(current = START)
+            if(current == START)
                 START = START.next;
             return true;
         }
@@ -92,7 +92,7 @@ namespace single_linked_list
         }
         public void Traverse()
         {
-            if(ListEmpty())
+            if(listEmpty())
                 Console.WriteLine("\nThe Records in The List are: ");
             else
             {
@@ -119,7 +119,19 @@ namespace single_linked_list
         static void Main(string[] args)
         {
             List obj = new List();
-
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMENU");
+                    Console.WriteLine("1. Add a record to the list");
+                    Console.WriteLine("2. Delete a record from the list");
+                    Console.WriteLine("3. View all the records in the list");
+                    Console.WriteLine("4. Search for a record in the list");
+                    Console.WriteLine("5. EXIT");
+                    Console.Write("");
+                }
+            }
         }
     }
 }
