@@ -105,8 +105,16 @@ namespace single_linked_list
                 Console.WriteLine();
             }
         }
+
+        public bool listEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
+        }
     }
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
