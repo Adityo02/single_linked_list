@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace single_linked_list
 {
+    //each node consist of the information partand link to the next node
     class Node
     {
         public int rollNumber;
@@ -15,7 +16,15 @@ namespace single_linked_list
 
     class List
     {
+        Node START;
+        public List()
+        {
+            START = null;
+        }
+        public void addNote()
+        {
 
+        }
     }
     internal class Program
     {
