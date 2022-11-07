@@ -46,6 +46,10 @@ namespace single_linked_list
                 return;
             }
 
+            Node previous, current;
+            previous = START;
+            current = START;
+
         }
     }
     internal class Program
